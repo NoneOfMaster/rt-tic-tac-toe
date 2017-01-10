@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+  margin: 0 auto;
+  border-spacing: 0px;
+}
+
+td {
+  cursor: pointer;
+  text-align: center;  
+  font-size: 40px;
+  border: solid;
+  height: 50px;
+  width: 50px;
+}
+
+#game-commentator, #after-game-message {
+  text-align: center;
+}
+
+.blank-box:hover {
+  background-color: rgb(218,218,218);
+}
+
+.winning-box {
+  background-color: rgb(255,192,203);
+}
+
+#after-game-message {
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+
+/** box borders **/
+
+#a1 {
+  border-width: 0px 2px 2px 0px;
+}
+
+#a2 {
+  border-width: 0px 0px 2px 0px;
+}
+
+#a3 {
+  border-width: 0px 0px 2px 2px;
+}
+
+#b1 {
+  border-width: 0px 2px 0px 0px;
+}
+
+#b2 {
+  border: none;
+}
+
+#b3 {
+  border-width: 0px 0px 0px 2px;
+}
+
+#c1 {
+  border-width: 2px 2px 0px 0px;
+}
+
+#c2 {
+  border-width: 2px 0px 0px 0px;
+}
+
+#c3 {
+  border-width: 2px 0px 0px 2px;
+}
