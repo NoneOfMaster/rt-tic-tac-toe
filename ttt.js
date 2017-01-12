@@ -1,4 +1,3 @@
-
 function initialSetUp() {
   var player = 1;
   setBoxFunctions(player);
@@ -10,11 +9,6 @@ function setBoxFunctions(player) {
 
   for (var i = 0; i < boxes.length ; i++) {
     var box = boxes[i];
-
-    // cloning to remove listeners
-    var clonedBox = box.cloneNode(true);
-    box.parentNode.replaceChild(clonedBox, box);
-    box = clonedBox;
 
     box.addEventListener("mouseover", function() {
       if ( this.className === "blank-box" ) {
@@ -33,6 +27,7 @@ function setBoxFunctions(player) {
         this.className = player;
         document.getElementById("current-player").innerHTML = "2";
 
+        removeAllBoxListeners();
         if ( !playerWins(player) ) { setBoxFunctions(2) }
 
       } else {
@@ -40,11 +35,23 @@ function setBoxFunctions(player) {
         this.className = player;
         document.getElementById("current-player").innerHTML = "1";
 
+        removeAllBoxListeners();
         if ( !playerWins(player) ) { setBoxFunctions(1) }
 
       }
     });
 
+  }
+}
+
+function removeAllBoxListeners() {
+  // cloning to remove all listeners
+  var boxes = document.getElementsByTagName("td");
+  for (var i = 0; i < boxes.length ; i++) {
+    var box = boxes[i];
+    var clonedBox = box.cloneNode(true);
+    box.parentNode.replaceChild(clonedBox, box);
+    box = clonedBox;
   }
 }
 
@@ -92,11 +99,21 @@ function freezeBoardEndMessage() {
   var message = document.createElement("h2");
   message.id = "after-game-message";
   message.innerHTML = "Click here to play again.";
-  var body = document.getElementsByTagName("body")[0];
-  body.appendChild(message);
+  var thankYou = document.createElement("p");
+  thankYou.id = "thank-you-message";
+  thankYou.innerHTML = "Thanks for playing my tic tac toe app!";
+  
+  var theme = document.getElementsByTagName("body")[0].className;
+  message.className = theme;
+  thankYou.className = theme;
+
+  var gameSpace = document.getElementById("game-space");
+  gameSpace.appendChild(message);
+  gameSpace.appendChild(thankYou);
 
   message.addEventListener("click", function() {
-    body.removeChild(message);
+    gameSpace.removeChild(message);
+    gameSpace.removeChild(thankYou);
     for (var i = 0; i < boxes.length; i++) {
       boxes[i].className = "blank-box";
       boxes[i].innerHTML = "";
