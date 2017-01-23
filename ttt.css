@@ -2,6 +2,10 @@ html {
   min-height: 100%; /** for background image issues **/
 }
 
+#preload { /** so backgrounds switch faster **/
+  display: none; 
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-position: center;
