@@ -1,0 +1,46 @@
+doctype html 
+
+html
+
+  head
+
+    title Tic Tac Toe
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width", initial-scale="1")
+    meta(name="author" content="Russell Tepper")
+    meta(name="description" content="Russell's Tic Tac Toe Game")
+
+    link(rel="stylesheet", href="css/main.css", type="text/css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Pacifico")
+
+    script(src="js/ttt.js")
+    script(src="js/ttt-themes.js")
+
+  body(onload="initialSetup()").city-theme
+
+    #game-space
+
+      h1#game-commentator Player 
+        span#current-player 1
+        's turn.
+
+      table#ttt-table
+        tr
+          td#a1.blank-box
+          td#a2.blank-box
+          td#a3.blank-box
+        tr
+          td#b1.blank-box
+          td#b2.blank-box
+          td#b3.blank-box
+        tr
+          td#c1.blank-box
+          td#c2.blank-box
+          td#c3.blank-box
+
+    #theme-selector
+      #winter-button(onclick="switchTheme('winter')")
+      #city-button(onclick="switchTheme('city')")
+
+    #preload
+      img(src="img/winter.jpg")

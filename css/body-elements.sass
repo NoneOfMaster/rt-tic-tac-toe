@@ -1,0 +1,43 @@
+html 
+  min-height: 100% /** for background image issues **/
+
+#preload  /** so backgrounds switch faster **/
+  display: none 
+
+body 
+  font-family: Arial, Helvetica, sans-serif
+  background-position: center
+  background-repeat: no-repeat 
+
+#after-game-message 
+  cursor: pointer
+  display: inline-block
+  margin-bottom: 0
+
+#after-game-message:hover 
+  transition:all 0.2s linear
+  -webkit-transform: scale(1.1)
+  -ms-transform: scale(1.1)
+  transform: scale(1.1)
+  color: rgb(241,102,113)
+
+#thank-you-message 
+  font-family: 'Pacifico', cursive
+  font-size: 20
+
+#theme-selector 
+  text-align: center
+
+#theme-selector div 
+  display: inline-block
+  cursor: pointer
+  border: 1px solid 
+  height: 60px
+  width: 60px
+
+#theme-selector p 
+  margin-bottom: 0px
+  text-align: center
+
+body.winter-theme #winter-button, body.city-theme #city-button 
+  border: 2px solid

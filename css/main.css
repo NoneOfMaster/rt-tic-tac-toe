@@ -1,0 +1,128 @@
+table {
+  margin: 0 auto;
+  border-spacing: 0px;
+  margin-bottom: 20px; }
+
+td {
+  cursor: pointer;
+  text-align: center;
+  font-size: 40px;
+  border: solid;
+  height: 50px;
+  width: 50px; }
+
+#game-space {
+  margin-bottom: 25px;
+  text-align: center; }
+
+#a1 {
+  border-width: 0px 2px 2px 0px; }
+
+#a2 {
+  border-width: 0px 0px 2px 0px; }
+
+#a3 {
+  border-width: 0px 0px 2px 2px; }
+
+#b1 {
+  border-width: 0px 2px 0px 0px; }
+
+#b2 {
+  border: none; }
+
+#b3 {
+  border-width: 0px 0px 0px 2px; }
+
+#c1 {
+  border-width: 2px 2px 0px 0px; }
+
+#c2 {
+  border-width: 2px 0px 0px 0px; }
+
+#c3 {
+  border-width: 2px 0px 0px 2px; }
+
+html {
+  min-height: 100%; }
+
+#preload {
+  display: none; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#after-game-message {
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 0; }
+
+#after-game-message:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  color: #f16671; }
+
+#thank-you-message {
+  font-family: 'Pacifico', cursive;
+  font-size: 20; }
+
+#theme-selector {
+  text-align: center; }
+
+#theme-selector div {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid;
+  height: 60px;
+  width: 60px; }
+
+#theme-selector p {
+  margin-bottom: 0px;
+  text-align: center; }
+
+body.winter-theme #winter-button, body.city-theme #city-button {
+  border: 2px solid; }
+
+#winter-button {
+  background-image: url("../img/winter-thumb.jpg"); }
+
+body.winter-theme {
+  background-image: url("../img/winter.jpg"); }
+
+body.winter-theme .blank-box:hover {
+  background-color: #dadada; }
+
+body.winter-theme #thank-you-message {
+  color: #f16671; }
+
+body.winter-theme #game-commentator {
+  color: #f16671; }
+
+body.winter-theme #after-game-message:hover {
+  color: #f16671; }
+
+body.winter-theme .winning-box {
+  background-color: pink; }
+
+#city-button {
+  background-image: url("../img/city-thumb.jpg"); }
+
+body.city-theme {
+  background-image: url("../img/city.jpg"); }
+
+body.city-theme #thank-you-message {
+  color: #faffb9; }
+
+body.city-theme #game-commentator {
+  color: #faffb9; }
+
+body.city-theme #after-game-message:hover {
+  color: #faffb9; }
+
+body.city-theme .blank-box:hover {
+  background-color: rgba(253, 250, 187, 0.46); }
+
+body.city-theme .winning-box {
+  background-color: #faffb9; }

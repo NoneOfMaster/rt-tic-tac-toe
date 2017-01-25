@@ -1,4 +1,4 @@
-function initialSetUp() {
+function initialSetup() {
   var player = 1;
   setBoxFunctions(player);
 }

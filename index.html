@@ -1,53 +1,41 @@
-<!DOCTYPE html> 
+<!DOCTYPE html >
 <html>
-
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Russell Tepper" />
-    <meta name="description" content="Russell's Tic Tac Toe Game" />
-
-    <link href="ttt.css" rel="stylesheet" type="text/css" >
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <script src="ttt.js"></script>
-    <script src="ttt-themes.js"></script>
+    <title>Tic Tac Toe</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width" initial-scale="1"/>
+    <meta name="author" content="Russell Tepper"/>
+    <meta name="description" content="Russell's Tic Tac Toe Game"/>
+    <link rel="stylesheet" href="css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico"/>
+    <script src="js/ttt.js"></script>
+    <script src="js/ttt-themes.js"></script>
   </head>
-
-  <body class="city-theme" onload="initialSetUp()">
-
-  <div id="game-space">
-
-    <h1 id="game-commentator">Player <span id="current-player">1</span>'s turn.</h1>
-
-    <table id="ttt-table">
-      <tr>
-        <td id="a1" class="blank-box"></td>
-        <td id="a2" class="blank-box"></td>
-        <td id="a3" class="blank-box"></td>
-      </tr>
-      <tr>
-        <td id="b1" class="blank-box"></td>
-        <td id="b2" class="blank-box"></td>
-        <td id="b3" class="blank-box"></td>
-      </tr>      
-      <tr>
-        <td id="c1" class="blank-box"></td>
-        <td id="c2" class="blank-box"></td>
-        <td id="c3" class="blank-box"></td>
-      </tr>
-    </table>
-
-  </div>
-
-  <div id="theme-selector">
-    <div id="winter-button" onclick="switchTheme('winter')"></div>
-    <div id="city-button" onclick="switchTheme('city')"></div>
-  </div>
-
-  <div id="preload">
-     <img src="winter.jpg">
-  </div>
-
+  <body onload="initialSetup()" class="city-theme">
+    <div id="game-space">
+      <h1 id="game-commentator">Player <span id="current-player">1</span>'s turn.</h1>
+      <table id="ttt-table">
+        <tr>
+          <td id="a1" class="blank-box"></td>
+          <td id="a2" class="blank-box"></td>
+          <td id="a3" class="blank-box"></td>
+        </tr>
+        <tr>
+          <td id="b1" class="blank-box"></td>
+          <td id="b2" class="blank-box"></td>
+          <td id="b3" class="blank-box"></td>
+        </tr>
+        <tr>
+          <td id="c1" class="blank-box"></td>
+          <td id="c2" class="blank-box"></td>
+          <td id="c3" class="blank-box"></td>
+        </tr>
+      </table>
+    </div>
+    <div id="theme-selector">
+      <div id="winter-button" onclick="switchTheme('winter')"></div>
+      <div id="city-button" onclick="switchTheme('city')"></div>
+    </div>
+    <div id="preload"><img src="img/winter.jpg"/></div>
   </body>
-
 </html>
